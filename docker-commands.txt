@@ -1,0 +1,26 @@
+- Melihat Images
+docker images
+
+- membuat container 
+docker container create --name nama_container nama_images
+* example : docker container --name mongo-server1 mongo:4.1
+
+- melihat container (yang running saja)
+docker container ls
+
+- melihat container (yang running dan tidak running)
+docker container ls --all
+
+- stop container yang sedang running
+docker container stop nama_container
+* example : docker container stop mongo-server1
+* example : docker container stop mongo-server1 mongo-server2
+
+- menghapus container 
+docker container rm nama_container
+* example : docker container rm mongo-server1
+* example : docker container rm mongo-server1 mongo-server2
+
+- menghapus images 
+docker image rm nama_image
+* example : docker image rm mongo:4.1
