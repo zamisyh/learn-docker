@@ -24,3 +24,28 @@ docker container rm nama_container
 - menghapus images 
 docker image rm nama_image
 * example : docker image rm mongo:4.1
+
+
+- build image menggunakan Dockerfile
+docker build --tag name_app:version .
+* example : docker build --tag golang_v:1.0 .
+
+- Membuat tag baru untuk docker registry
+docker tag local-image:tagname reponame:tagname
+* example : docker tag golang-v:1.0 zamsyhdev/golang-v:1.0
+
+- login docker di terminal
+docker login
+
+- push image ke docker registry
+docker push reponame:tagname
+
+- eksekusi atau debugging dan masuk ke dalam container
+docker exec -t -i nama_container /bin/bash
+* example : docker exec -t -i redis /bin/bash
+* example : docker push zamsyhdev/golang-v:1.0
+
+- pull image dari docker registry ke local
+docker pull reponame:tagname
+* example : docker pull zamsyhdev/golang-v:1.0
+
